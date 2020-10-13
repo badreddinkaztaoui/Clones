@@ -1,0 +1,21 @@
+.login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #000;
+  .logo {
+    width: 250px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .link {
+    padding: 15px 30px;
+    border-radius: 65px;
+    background-color: #1db954;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
