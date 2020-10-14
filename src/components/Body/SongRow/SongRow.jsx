@@ -1,20 +1,19 @@
 import React from "react";
 import "./SongRow.scss";
 
-function SongRow(props) {
+function SongRow() {
   return (
     <div className="song__row">
       <img
         className="song__rowAlbum"
-        src={props.track.album.images[0].url}
+        src={
+          "https://images.genius.com/ad13f9fed8c302c9ec69e36c1cdc4db7.600x600x1.jpg"
+        }
         alt=""
       />
       <div className="song__rowInfo">
-        <h1>{props.track.name}</h1>
-        <p>
-          {props.track.artists.map((artist) => artist.name).join(", ")}
-          {props.track.album.name}
-        </p>
+        <h1>Track Name</h1>
+        <p>Artist Name. Track Album Name</p>
       </div>
     </div>
   );

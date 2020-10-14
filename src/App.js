@@ -23,10 +23,6 @@ class App extends Component {
       spotify.getUserPlaylists().then((playlist) => {
         this.props.setPlaylist(playlist);
       });
-
-      spotify.getPlaylist("37i9dQZF1E387pAMk28Hcs").then((res) => {
-        this.props.setDiscoverWeekly(res);
-      });
     }
   }
 
@@ -53,8 +49,6 @@ const mapDispatchToProps = (dispatch) => {
     setToken: (token) => dispatch(actions.setToken(token)),
     setUser: (user) => dispatch(actions.setUser(user)),
     setPlaylist: (playlist) => dispatch(actions.setPlaylist(playlist)),
-    setDiscoverWeekly: (discover_weekly) =>
-      dispatch(actions.setDiscoverWeekly(discover_weekly)),
   };
 };
 

@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "./Header/Header";
-import { connect } from "react-redux";
 import SongRow from "./SongRow/SongRow";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import FavoriteIcon from "@material-ui/icons/Favorite";
@@ -14,11 +13,14 @@ function Body(props) {
     <div className="body">
       <Header spotify={props.spotify} />
       <div className="body__info">
-        <img src={props.discover_weekly?.images[0]?.url} alt="" />
+        <img
+          src="https://i.scdn.co/image/78542158649da811009de6311ccdd4e47a713178"
+          alt=""
+        />
         <div className="body__infoText">
           <strong>Playlist</strong>
           <h2>Discover Weekly</h2>
-          <p>{props.discover_weekly?.description}</p>
+          <p>Listen to Faouzia, Sam Smith And More Others</p>
         </div>
       </div>
       <div className="body__songs">
@@ -28,18 +30,22 @@ function Body(props) {
           <MoreHorizIcon />
         </div>
         {/* List Of Songs */}
-        {props.discover_weekly?.tracks.items.map((item) => {
-          return <SongRow track={item.track} />;
-        })}
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
+        <SongRow />
       </div>
     </div>
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    discover_weekly: state.discover_weekly,
-  };
-};
-
-export default connect(mapStateToProps)(Body);
+export default Body;
